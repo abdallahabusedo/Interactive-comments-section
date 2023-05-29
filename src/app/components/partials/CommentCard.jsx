@@ -1,11 +1,10 @@
 "use client";
 import { commentCard } from "@/styles/commentsStyle";
-import { Box, Divider } from "@mui/material";
-import React from "react";
-import Voting from "./Voting";
-import CommentTypo from "./CommentTypo";
+import { Box } from "@mui/material";
 import CommentHeader from "./CommentHeader";
-import ReplyCard from "./ReplyCard";
+import CommentTypo from "./CommentTypo";
+import Replies from "./Replies";
+import Voting from "./Voting";
 const CommentCard = ({ comment }) => {
   return (
     <Box>
@@ -22,7 +21,7 @@ const CommentCard = ({ comment }) => {
           <CommentTypo content={comment.content} />
         </Box>
       </Box>
-      <ReplyCard replies={comment.replies} />
+      <Replies replies={comment.replies} />
     </Box>
   );
 };
