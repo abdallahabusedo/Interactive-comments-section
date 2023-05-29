@@ -24,10 +24,11 @@ const Comments = () => {
         display: "flex",
         flexDirection: "column",
         gap: "10px",
+        mt: "20px",
       }}
     >
       {comments.map((comment) => {
-        return <CommentCard />;
+        return <CommentCard comment={comment} />;
       })}
     </Box>
   );

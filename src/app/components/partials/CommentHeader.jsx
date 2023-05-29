@@ -5,7 +5,7 @@ import React from "react";
 import ReplayButton from "./ReplayButton";
 import { commentHeader } from "@/styles/commentsStyle";
 
-const MessageHeader = () => {
+const MessageHeader = ({ user, createdAt }) => {
   return (
     <Box
       sx={{
@@ -15,13 +15,13 @@ const MessageHeader = () => {
     >
       <Box sx={commentHeader}>
         <Image
-          src={"/images/avatars/image-amyrobson.png"}
+          src={`${user && user.image.png}`}
           width={30}
           height={30}
           alt="pic"
         />
-        <Typography>amyrobson</Typography>
-        <Typography>1 month ago</Typography>
+        <Typography>{user.username}</Typography>
+        <Typography>{createdAt}</Typography>
       </Box>
       <ReplayButton />
     </Box>

@@ -16,7 +16,7 @@ export default function Home() {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-lightGray">
+    <div className="flex flex-col justify-center items-center bg-lightGray">
       <Comments />
       <AddComment userData={userData} />
     </div>
