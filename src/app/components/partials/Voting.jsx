@@ -6,8 +6,20 @@ import React from "react";
 
 const Voting = ({ score }) => {
   const [scoreState, setScoreState] = React.useState(score);
-  const increment = () => setScoreState(score + 1);
-  const decrement = () => setScoreState(score - 1);
+  const increment = () =>
+    setScoreState((prev) => {
+      if (scoreState >= score + 1) {
+        return prev;
+      }
+      return prev + 1;
+    });
+  const decrement = () =>
+    setScoreState((prev) => {
+      if (scoreState <= score - 1) {
+        return prev;
+      }
+      return prev - 1;
+    });
   return (
     <Box sx={voteCard}>
       <Image
