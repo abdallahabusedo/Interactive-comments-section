@@ -1,11 +1,11 @@
-"use client";
 import { commentCard } from "@/styles/commentsStyle";
 import { Box } from "@mui/material";
+import React from "react";
+import Voting from "./Voting";
 import CommentHeader from "./CommentHeader";
 import CommentTypo from "./CommentTypo";
 import Replies from "./Replies";
-import Voting from "./Voting";
-const CommentCard = ({ comment }) => {
+const MyComments = ({ comment }) => {
   return (
     <Box>
       <Box sx={commentCard}>
@@ -15,12 +15,13 @@ const CommentCard = ({ comment }) => {
             display: "flex",
             flexDirection: "column",
             gap: "20px",
+            width: "100%",
           }}
         >
           <CommentHeader
             user={comment.user}
             createdAt={comment.createdAt}
-            isOwner={false}
+            isOwner={true}
           />
           <CommentTypo content={comment.content} />
         </Box>
@@ -30,4 +31,4 @@ const CommentCard = ({ comment }) => {
   );
 };
 
-export default CommentCard;
+export default MyComments;

@@ -4,7 +4,8 @@ import axios from "axios";
 import React from "react";
 import CommentCard from "./partials/CommentCard";
 import { getTimeFromString } from "../utils/generals";
-const Comments = () => {
+import MyComments from "./partials/MyComments";
+const Comments = ({ userData }) => {
   const [comments, setComments] = React.useState([]);
 
   React.useEffect(() => {
@@ -36,7 +37,9 @@ const Comments = () => {
           return timeA - timeB;
         })
         .map((comment) => {
-          return <CommentCard comment={comment} />;
+          if (comment.user.username != userData.username)
+            return <CommentCard comment={comment} />;
+          else return <MyComments comment={comment} />;
         })}
     </Box>
   );

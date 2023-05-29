@@ -29,7 +29,9 @@ export const commentHeader = {
   justifyContent: "start",
   alignItems: "center",
   gap: "20px",
-  flex: "1",
+  flex: "1 !important",
+  width: "100%",
+  "-webkit-flex": "1 !important",
 };
 
 export const replyButton = {

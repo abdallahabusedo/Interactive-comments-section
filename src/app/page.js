@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
   return !loading ? (
     <div className="flex flex-col justify-center items-center bg-lightGray">
-      <Comments />
+      <Comments userData={userData} />
       <AddComment userData={userData} />
     </div>
   ) : (

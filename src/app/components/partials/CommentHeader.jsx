@@ -1,29 +1,58 @@
 "use client";
-import { Box, Button, Typography } from "@mui/material";
-import Image from "next/image";
-import React from "react";
-import ReplayButton from "./ReplayButton";
 import { commentHeader } from "@/styles/commentsStyle";
+import { Box, Typography } from "@mui/material";
+import Image from "next/image";
+import DeleteButton from "./DeleteButton";
+import EditButton from "./EditButton";
+import ReplayButton from "./ReplayButton";
 
-const MessageHeader = ({ user, createdAt }) => {
+const MessageHeader = ({ user, createdAt, isOwner }) => {
   return (
     <Box
       sx={{
         display: "flex",
-        width: "100%",
+        justifyContent: "space-between",
       }}
     >
       <Box sx={commentHeader}>
-        <Image
-          src={`${user && user.image.png}`}
-          width={30}
-          height={30}
-          alt="pic"
-        />
+        <Box>
+          <Image
+            src={`${user && user.image.png}`}
+            width={30}
+            height={30}
+            alt="pic"
+          />
+        </Box>
         <Typography>{user.username}</Typography>
+        {isOwner && (
+          <Typography
+            sx={{
+              bgcolor: "hsl(238, 40%, 52%)",
+              color: "white",
+              px: "8px",
+              borderRadius: "5px",
+            }}
+          >
+            you
+          </Typography>
+        )}
         <Typography>{createdAt}</Typography>
       </Box>
-      <ReplayButton />
+      {isOwner ? (
+        <Box
+          fullWidth
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "5px",
+          }}
+        >
+          <DeleteButton />
+          <EditButton />
+        </Box>
+      ) : (
+        <ReplayButton />
+      )}
     </Box>
   );
 };
