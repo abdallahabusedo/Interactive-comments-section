@@ -40,3 +40,32 @@ export const replyButton = {
     opacity: "50%",
   },
 };
+
+export const addCommentCard = {
+  display: "flex",
+  alignItems: "start",
+  bgcolor: "white",
+  p: "20px",
+  borderRadius: "20px",
+  mt: "10px",
+  mb: "20px",
+};
+
+export const addCommentContainer = {
+  display: "flex",
+  width: "800px",
+  gap: "20px",
+  alignItems: "start",
+  justifyContent: "space-evenly",
+  mt: "10px",
+};
+
+export const sendButton = {
+  bgcolor: "#5357b6 !important",
+  color: "white",
+  borderRadius: "10px",
+  p: "10px 22px",
+  ":hover": {
+    bgcolor: "#5357b6aa !important",
+  },
+};
