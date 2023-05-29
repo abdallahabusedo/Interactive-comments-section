@@ -29,7 +29,10 @@ const ReplyCard = ({ replies }) => {
                   }}
                 >
                   <CommentHeader user={reply.user} />
-                  <CommentTypo content={reply.content} />
+                  <CommentTypo
+                    content={reply.content}
+                    repliedTo={reply.replyingTo}
+                  />
                 </Box>
               </Box>
             </Box>
