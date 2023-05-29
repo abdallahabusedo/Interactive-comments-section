@@ -5,6 +5,9 @@ import Image from "next/image";
 import React from "react";
 
 const Voting = ({ score }) => {
+  const [scoreState, setScoreState] = React.useState(score);
+  const increment = () => setScoreState(score + 1);
+  const decrement = () => setScoreState(score - 1);
   return (
     <Box sx={voteCard}>
       <Image
@@ -12,15 +15,17 @@ const Voting = ({ score }) => {
         width={15}
         height={15}
         alt="plus"
-        className="hover:opacity-50 hover:cursor-pointer"
+        className="opacity-50 hover:opacity-100 hover:cursor-pointer"
+        onClick={increment}
       />
-      <Typography sx={voteNumber}>{score}</Typography>
+      <Typography sx={voteNumber}>{scoreState}</Typography>
       <Image
         src={"/images/icon-minus.svg"}
         width={15}
         height={15}
         alt="minus"
-        className="hover:opacity-50 hover:cursor-pointer"
+        className="opacity-50 hover:opacity-100 hover:cursor-pointer"
+        onClick={decrement}
       />
     </Box>
   );
