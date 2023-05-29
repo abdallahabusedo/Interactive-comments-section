@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import ReplyCard from "./ReplyCard";
+import { getTimeFromString } from "@/app/utils/generals";
 
 const Replies = ({ replies }) => {
   return replies.length ? (
@@ -12,9 +13,16 @@ const Replies = ({ replies }) => {
         }}
       ></Box>
       <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-        {replies.map((reply) => {
-          return <ReplyCard reply={reply} />;
-        })}
+        {replies
+          .sort((A, B) => {
+            if (A.score !== B.score) return B.score - A.score;
+            const timeA = getTimeFromString(A.createdAt);
+            const timeB = getTimeFromString(B.createdAt);
+            return timeB - timeA;
+          })
+          .map((reply) => {
+            return <ReplyCard reply={reply} />;
+          })}
       </Box>
     </Box>
   ) : null;

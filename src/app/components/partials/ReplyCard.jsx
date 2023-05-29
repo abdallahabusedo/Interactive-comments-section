@@ -16,7 +16,7 @@ const ReplyCard = ({ reply }) => {
             gap: "20px",
           }}
         >
-          <CommentHeader user={reply.user} />
+          <CommentHeader user={reply.user} createdAt={reply.createdAt} />
           <CommentTypo content={reply.content} repliedTo={reply.replyingTo} />
         </Box>
       </Box>

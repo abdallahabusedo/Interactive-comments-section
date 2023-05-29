@@ -3,8 +3,10 @@ import { Box } from "@mui/material";
 import axios from "axios";
 import React from "react";
 import CommentCard from "./partials/CommentCard";
+import { getTimeFromString } from "../utils/generals";
 const Comments = () => {
   const [comments, setComments] = React.useState([]);
+
   React.useEffect(() => {
     axios
       .request({
@@ -13,7 +15,6 @@ const Comments = () => {
         url: "http://localhost:3000/comments",
       })
       .then((res) => {
-        console.log("data", res.data);
         setComments(res.data);
       })
       .catch((err) => console.log(err));
@@ -27,9 +28,16 @@ const Comments = () => {
         mt: "20px",
       }}
     >
-      {comments.map((comment) => {
-        return <CommentCard comment={comment} />;
-      })}
+      {comments
+        .sort((A, B) => {
+          if (A.score !== B.score) return B.score - A.score;
+          const timeA = getTimeFromString(A.createdAt);
+          const timeB = getTimeFromString(B.createdAt);
+          return timeA - timeB;
+        })
+        .map((comment) => {
+          return <CommentCard comment={comment} />;
+        })}
     </Box>
   );
 };
