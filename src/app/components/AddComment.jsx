@@ -28,6 +28,7 @@ const AddComment = () => {
         },
       },
       replies: [],
+      id: Math.floor(Math.random() * 10 + 6),
     };
     axios
       .request({

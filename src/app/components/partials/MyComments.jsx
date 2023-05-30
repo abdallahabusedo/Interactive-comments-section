@@ -6,6 +6,7 @@ import CommentHeader from "./CommentHeader";
 import CommentTypo from "./CommentTypo";
 import Replies from "./Replies";
 const MyComments = ({ comment }) => {
+  const [isEditing, setIsEditing] = React.useState(false);
   return (
     <Box>
       <Box sx={commentCard}>
@@ -23,7 +24,7 @@ const MyComments = ({ comment }) => {
             createdAt={comment.createdAt}
             isOwner={true}
           />
-          <CommentTypo content={comment.content} />
+          <CommentTypo isEditing={isEditing} content={comment.content} />
         </Box>
       </Box>
       <Replies replies={comment.replies} parentID={comment.id} />

@@ -1,6 +1,12 @@
 export const commentCard = {
   display: "flex",
-  width: "800px",
+  flexDirection: {
+    lg: "row",
+    md: "column-reverse",
+    sm: "column-reverse",
+    xs: "column-reverse",
+  },
+  width: { lg: "800px", md: "800px", sm: "500px", xs: "330px" },
   gap: "20px",
   bgcolor: "white",
   p: "20px",
@@ -9,10 +15,21 @@ export const commentCard = {
 
 export const voteCard = {
   display: "flex",
-  flexDirection: "column",
+  flexDirection: {
+    lg: "column",
+    md: "column",
+    sm: "row",
+    xs: "row",
+  },
   justifyContent: "space-evenly",
   alignItems: "center",
-  minWidth: "50px",
+  minWidth: {
+    lg: "50px",
+    md: "50px",
+    sm: "30px",
+    xs: "30px",
+  },
+  maxWidth: { lg: "150px", md: "150px", sm: "120px", xs: "120px" },
   maxHeight: "120px",
   borderRadius: "15px",
   bgcolor: "hsl(223, 19%, 93%)",
@@ -34,7 +51,7 @@ export const commentHeader = {
 };
 
 export const replyButton = {
-  display: "flex",
+  display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
   gap: "10px",
   borderRadius: "10px",
   ":hover": {
@@ -54,7 +71,7 @@ export const addCommentCard = {
 
 export const addCommentContainer = {
   display: "flex",
-  width: "800px",
+  width: { lg: "760px", md: "760px", sm: "500px", xs: "300px" },
   gap: "20px",
   alignItems: "start",
   justifyContent: "space-evenly",

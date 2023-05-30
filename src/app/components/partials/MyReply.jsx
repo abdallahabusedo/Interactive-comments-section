@@ -8,7 +8,12 @@ import CommentHeader from "./CommentHeader";
 const MyReply = ({ reply }) => {
   return (
     <Box sx={{ display: "flex" }}>
-      <Box sx={{ ...commentCard, width: "760px" }}>
+      <Box
+        sx={{
+          ...commentCard,
+          width: { lg: "760px", md: "760px", sm: "500px", xs: "300px" },
+        }}
+      >
         <Voting score={reply.score} />
         <Box
           sx={{

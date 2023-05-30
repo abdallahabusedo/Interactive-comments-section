@@ -6,7 +6,15 @@ import DeleteButton from "./DeleteButton";
 import EditButton from "./EditButton";
 import ReplayButton from "./ReplayButton";
 
-const MessageHeader = ({ user, createdAt, isOwner, setOpenReply }) => {
+const MessageHeader = ({
+  user,
+  createdAt,
+  isOwner,
+  setOpenReply,
+  parentId,
+  replyId,
+}) => {
+  console.log("header", parentId, replyId);
   return (
     <Box
       sx={{
@@ -31,12 +39,15 @@ const MessageHeader = ({ user, createdAt, isOwner, setOpenReply }) => {
               color: "white",
               px: "8px",
               borderRadius: "5px",
+              fontSize: { lg: "12px", xs: "10px" },
             }}
           >
             you
           </Typography>
         )}
-        <Typography>{createdAt}</Typography>
+        <Typography sx={{ fontSize: { lg: "12px", xs: "10px" } }}>
+          {createdAt}
+        </Typography>
       </Box>
       {isOwner ? (
         <Box
@@ -46,7 +57,7 @@ const MessageHeader = ({ user, createdAt, isOwner, setOpenReply }) => {
             gap: "5px",
           }}
         >
-          <DeleteButton />
+          <DeleteButton parentId={parentId} replyId={replyId} />
           <EditButton />
         </Box>
       ) : (

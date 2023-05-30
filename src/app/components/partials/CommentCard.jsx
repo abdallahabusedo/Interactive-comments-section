@@ -25,6 +25,7 @@ const CommentCard = ({ comment }) => {
             createdAt={comment.createdAt}
             isOwner={false}
             setOpenReply={setOpenReply}
+            parentId={comment.id}
           />
           <CommentTypo content={comment.content} />
         </Box>

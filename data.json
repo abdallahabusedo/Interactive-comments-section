@@ -19,60 +19,7 @@
         },
         "username": "amyrobson"
       },
-      "replies": [
-        {
-          "content": "hi there",
-          "createdAt": "0 second ago",
-          "score": 0,
-          "replyingTo": "amyrobson",
-          "user": {
-            "image": {
-              "png": "/images/avatars/image-juliusomo.png",
-              "webp": "/images/avatars/image-juliusomo.webp"
-            },
-            "username": "juliusomo"
-          }
-        },
-        {
-          "content": "hi",
-          "createdAt": "0 second ago",
-          "score": 0,
-          "replyingTo": "amyrobson",
-          "user": {
-            "image": {
-              "png": "/images/avatars/image-juliusomo.png",
-              "webp": "/images/avatars/image-juliusomo.webp"
-            },
-            "username": "juliusomo"
-          }
-        },
-        {
-          "content": "hi",
-          "createdAt": "0 second ago",
-          "score": 0,
-          "replyingTo": "amyrobson",
-          "user": {
-            "image": {
-              "png": "/images/avatars/image-juliusomo.png",
-              "webp": "/images/avatars/image-juliusomo.webp"
-            },
-            "username": "juliusomo"
-          }
-        },
-        {
-          "content": "aa",
-          "createdAt": "0 second ago",
-          "score": 0,
-          "replyingTo": "amyrobson",
-          "user": {
-            "image": {
-              "png": "/images/avatars/image-juliusomo.png",
-              "webp": "/images/avatars/image-juliusomo.webp"
-            },
-            "username": "juliusomo"
-          }
-        }
-      ]
+      "replies": []
     },
     {
       "id": 2,
@@ -116,58 +63,6 @@
           }
         },
         {
-          "content": "abdallah",
-          "createdAt": "0 second ago",
-          "score": 0,
-          "replyingTo": "maxblagun",
-          "user": {
-            "image": {
-              "png": "/images/avatars/image-juliusomo.png",
-              "webp": "/images/avatars/image-juliusomo.webp"
-            },
-            "username": "juliusomo"
-          }
-        },
-        {
-          "content": "again",
-          "createdAt": "0 second ago",
-          "score": 0,
-          "replyingTo": "maxblagun",
-          "user": {
-            "image": {
-              "png": "/images/avatars/image-juliusomo.png",
-              "webp": "/images/avatars/image-juliusomo.webp"
-            },
-            "username": "juliusomo"
-          }
-        },
-        {
-          "content": "aa",
-          "createdAt": "0 second ago",
-          "score": 0,
-          "replyingTo": "ramsesmiron",
-          "user": {
-            "image": {
-              "png": "/images/avatars/image-juliusomo.png",
-              "webp": "/images/avatars/image-juliusomo.webp"
-            },
-            "username": "juliusomo"
-          }
-        },
-        {
-          "content": "new comment",
-          "createdAt": "0 second ago",
-          "score": 0,
-          "replyingTo": "ramsesmiron",
-          "user": {
-            "image": {
-              "png": "/images/avatars/image-juliusomo.png",
-              "webp": "/images/avatars/image-juliusomo.webp"
-            },
-            "username": "juliusomo"
-          }
-        },
-        {
           "content": "aaa",
           "createdAt": "0 second ago",
           "score": 0,
@@ -179,24 +74,11 @@
             },
             "username": "juliusomo"
           }
-        },
-        {
-          "content": "asdasd",
-          "createdAt": "0 second ago",
-          "score": 0,
-          "replyingTo": "maxblagun",
-          "user": {
-            "image": {
-              "png": "/images/avatars/image-juliusomo.png",
-              "webp": "/images/avatars/image-juliusomo.webp"
-            },
-            "username": "juliusomo"
-          }
         }
       ]
     },
     {
-      "content": "dasda",
+      "content": "asdsad",
       "createdAt": "0 second ago",
       "score": 0,
       "user": {
@@ -207,21 +89,7 @@
         }
       },
       "replies": [],
-      "id": 3
-    },
-    {
-      "content": "hi there",
-      "createdAt": "0 second ago",
-      "score": 0,
-      "user": {
-        "username": "juliusomo",
-        "image": {
-          "png": "/images/avatars/image-juliusomo.png",
-          "webp": "/images/avatars/image-juliusomo.webp"
-        }
-      },
-      "replies": [],
-      "id": 4
+      "id": 12
     }
   ]
 }

@@ -1,16 +1,22 @@
 "use client";
-import { Box, Typography } from "@mui/material";
+import { Box, TextField, Typography } from "@mui/material";
 import React from "react";
 
-const CommentTypo = ({ content, repliedTo }) => {
+const CommentTypo = ({ content, repliedTo, isEditing }) => {
   return (
     <Box>
-      <Typography>
-        {repliedTo && (
-          <span className="font-bold text-moderateBlue">@{repliedTo} </span>
-        )}
-        {content}
-      </Typography>
+      {isEditing ? (
+        <Box>
+          <TextField defaultValue={`@${repliedTo} ${content}`} />
+        </Box>
+      ) : (
+        <Typography>
+          {repliedTo && (
+            <span className="font-bold text-moderateBlue">@{repliedTo} </span>
+          )}
+          {content}
+        </Typography>
+      )}
     </Box>
   );
 };

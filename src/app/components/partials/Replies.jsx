@@ -6,6 +6,7 @@ import React from "react";
 
 const Replies = ({ replies, parentID }) => {
   let userData = JSON.parse(localStorage.getItem("userData"));
+
   return replies.length ? (
     <Box sx={{ display: "flex", ml: "20px", gap: "20px", mt: "10px" }}>
       <Box
@@ -24,6 +25,7 @@ const Replies = ({ replies, parentID }) => {
             return timeB - timeA;
           })
           .map((reply, index) => {
+            console.log("==>", parentID, reply.id);
             if (reply.user.username == userData.username)
               return <MyReply key={index} reply={reply} />;
             else
@@ -32,6 +34,7 @@ const Replies = ({ replies, parentID }) => {
                   key={index}
                   reply={reply}
                   parentID={parentID}
+                  replyId={reply.id}
                   oldReplies={replies}
                 />
               );

@@ -20,6 +20,7 @@ const AddReply = ({ id = 1, replyingTo, oldReplies }) => {
       score: 0,
       replyingTo: replyingTo,
       user: userData,
+      id: Math.random() * 10 + 6,
     };
     axios
       .patch(`http://localhost:3000/comments/${id}`, {
