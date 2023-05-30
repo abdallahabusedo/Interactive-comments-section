@@ -24,7 +24,7 @@ const Voting = ({ score }) => {
     <Box sx={voteCard}>
       <Button
         onClick={increment}
-        sx={{ minWidth: "35px !important", height: "20px" }}
+        sx={{ minWidth: "35px !important", height: "20px", overflow: "hidden" }}
       >
         <Image
           src={"/images/icon-plus.svg"}
