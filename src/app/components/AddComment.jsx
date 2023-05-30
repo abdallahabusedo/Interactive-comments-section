@@ -49,7 +49,7 @@ const AddComment = () => {
     <Box sx={addCommentCard}>
       <Box sx={addCommentContainer}>
         <Image
-          src={userData.image.png}
+          src={userData && userData.image.png}
           width={40}
           height={40}
           alt="pic"

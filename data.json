@@ -58,6 +58,19 @@
             },
             "username": "juliusomo"
           }
+        },
+        {
+          "content": "aa",
+          "createdAt": "0 second ago",
+          "score": 0,
+          "replyingTo": "amyrobson",
+          "user": {
+            "image": {
+              "png": "/images/avatars/image-juliusomo.png",
+              "webp": "/images/avatars/image-juliusomo.webp"
+            },
+            "username": "juliusomo"
+          }
         }
       ]
     },
@@ -120,6 +133,32 @@
           "createdAt": "0 second ago",
           "score": 0,
           "replyingTo": "maxblagun",
+          "user": {
+            "image": {
+              "png": "/images/avatars/image-juliusomo.png",
+              "webp": "/images/avatars/image-juliusomo.webp"
+            },
+            "username": "juliusomo"
+          }
+        },
+        {
+          "content": "aa",
+          "createdAt": "0 second ago",
+          "score": 0,
+          "replyingTo": "ramsesmiron",
+          "user": {
+            "image": {
+              "png": "/images/avatars/image-juliusomo.png",
+              "webp": "/images/avatars/image-juliusomo.webp"
+            },
+            "username": "juliusomo"
+          }
+        },
+        {
+          "content": "new comment",
+          "createdAt": "0 second ago",
+          "score": 0,
+          "replyingTo": "ramsesmiron",
           "user": {
             "image": {
               "png": "/images/avatars/image-juliusomo.png",

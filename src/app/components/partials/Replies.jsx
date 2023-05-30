@@ -2,10 +2,11 @@ import { Box } from "@mui/material";
 import ReplyCard from "./ReplyCard";
 import { getTimeFromString } from "@/app/utils/generals";
 import MyReply from "./MyReply";
+import React from "react";
 
 const Replies = ({ replies, parentID }) => {
   let userData = JSON.parse(localStorage.getItem("userData"));
-  console.log(replies);
+  const [tempReplies, setTempReplies] = React.useState(replies);
   return replies.length ? (
     <Box sx={{ display: "flex", ml: "20px", gap: "20px", mt: "10px" }}>
       <Box
@@ -32,7 +33,7 @@ const Replies = ({ replies, parentID }) => {
                   key={index}
                   reply={reply}
                   parentID={parentID}
-                  oldReplies={replies}
+                  oldReplies={tempReplies}
                 />
               );
           })}
