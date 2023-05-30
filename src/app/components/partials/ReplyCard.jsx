@@ -4,9 +4,15 @@ import React from "react";
 import CommentHeader from "./CommentHeader";
 import CommentTypo from "./CommentTypo";
 import Voting from "./Voting";
-const ReplyCard = ({ reply }) => {
+import AddReply from "../AddReply";
+import AddNestedReply from "./AddNestedReply";
+const ReplyCard = ({ reply, parentID, replies }) => {
+  const [openReply, setOpenReply] = React.useState(false);
+
+  let userData = JSON.parse(localStorage.getItem("userData"));
+  console.log(replies);
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
       <Box sx={{ ...commentCard, width: "760px" }}>
         <Voting score={reply.score} />
         <Box
@@ -16,10 +22,23 @@ const ReplyCard = ({ reply }) => {
             gap: "20px",
           }}
         >
-          <CommentHeader user={reply.user} createdAt={reply.createdAt} />
+          <CommentHeader
+            user={reply.user}
+            createdAt={reply.createdAt}
+            setOpenReply={setOpenReply}
+            isOwner={false}
+          />
           <CommentTypo content={reply.content} repliedTo={reply.replyingTo} />
         </Box>
       </Box>
+      {openReply && (
+        <AddNestedReply
+          id={reply.id}
+          replyingTo={reply.user.username}
+          parentID={parentID}
+          oldReplies={replies}
+        />
+      )}
     </Box>
   );
 };

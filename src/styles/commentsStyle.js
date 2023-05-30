@@ -29,9 +29,8 @@ export const commentHeader = {
   justifyContent: "start",
   alignItems: "center",
   gap: "20px",
-  flex: "1 !important",
+  flex: "1",
   width: "100%",
-  "-webkit-flex": "1 !important",
 };
 
 export const replyButton = {
@@ -50,7 +49,7 @@ export const addCommentCard = {
   p: "20px",
   borderRadius: "20px",
   mt: "10px",
-  mb: "20px",
+  mb: "10px",
 };
 
 export const addCommentContainer = {

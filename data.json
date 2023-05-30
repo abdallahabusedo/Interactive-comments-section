@@ -19,7 +19,47 @@
         },
         "username": "amyrobson"
       },
-      "replies": []
+      "replies": [
+        {
+          "content": "hi there",
+          "createdAt": "0 second ago",
+          "score": 0,
+          "replyingTo": "amyrobson",
+          "user": {
+            "image": {
+              "png": "/images/avatars/image-juliusomo.png",
+              "webp": "/images/avatars/image-juliusomo.webp"
+            },
+            "username": "juliusomo"
+          }
+        },
+        {
+          "content": "hi",
+          "createdAt": "0 second ago",
+          "score": 0,
+          "replyingTo": "amyrobson",
+          "user": {
+            "image": {
+              "png": "/images/avatars/image-juliusomo.png",
+              "webp": "/images/avatars/image-juliusomo.webp"
+            },
+            "username": "juliusomo"
+          }
+        },
+        {
+          "content": "hi",
+          "createdAt": "0 second ago",
+          "score": 0,
+          "replyingTo": "amyrobson",
+          "user": {
+            "image": {
+              "png": "/images/avatars/image-juliusomo.png",
+              "webp": "/images/avatars/image-juliusomo.webp"
+            },
+            "username": "juliusomo"
+          }
+        }
+      ]
     },
     {
       "id": 2,
@@ -54,6 +94,32 @@
           "createdAt": "2 days ago",
           "score": 2,
           "replyingTo": "ramsesmiron",
+          "user": {
+            "image": {
+              "png": "/images/avatars/image-juliusomo.png",
+              "webp": "/images/avatars/image-juliusomo.webp"
+            },
+            "username": "juliusomo"
+          }
+        },
+        {
+          "content": "abdallah",
+          "createdAt": "0 second ago",
+          "score": 0,
+          "replyingTo": "maxblagun",
+          "user": {
+            "image": {
+              "png": "/images/avatars/image-juliusomo.png",
+              "webp": "/images/avatars/image-juliusomo.webp"
+            },
+            "username": "juliusomo"
+          }
+        },
+        {
+          "content": "again",
+          "createdAt": "0 second ago",
+          "score": 0,
+          "replyingTo": "maxblagun",
           "user": {
             "image": {
               "png": "/images/avatars/image-juliusomo.png",

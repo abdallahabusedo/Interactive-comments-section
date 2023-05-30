@@ -5,8 +5,9 @@ import React from "react";
 import CommentCard from "./partials/CommentCard";
 import { getTimeFromString } from "../utils/generals";
 import MyComments from "./partials/MyComments";
-const Comments = ({ userData }) => {
+const Comments = () => {
   const [comments, setComments] = React.useState([]);
+  let userData = JSON.parse(localStorage.getItem("userData"));
 
   React.useEffect(() => {
     axios
@@ -36,10 +37,10 @@ const Comments = ({ userData }) => {
           const timeB = getTimeFromString(B.createdAt);
           return timeA - timeB;
         })
-        .map((comment) => {
+        .map((comment, index) => {
           if (comment.user.username != userData.username)
-            return <CommentCard comment={comment} />;
-          else return <MyComments comment={comment} />;
+            return <CommentCard key={index} comment={comment} />;
+          else return <MyComments key={index} comment={comment} />;
         })}
     </Box>
   );

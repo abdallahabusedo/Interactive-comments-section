@@ -1,8 +1,11 @@
 import { Box } from "@mui/material";
 import ReplyCard from "./ReplyCard";
 import { getTimeFromString } from "@/app/utils/generals";
+import MyReply from "./MyReply";
 
-const Replies = ({ replies }) => {
+const Replies = ({ replies, parentID }) => {
+  let userData = JSON.parse(localStorage.getItem("userData"));
+  console.log(replies);
   return replies.length ? (
     <Box sx={{ display: "flex", ml: "20px", gap: "20px", mt: "10px" }}>
       <Box
@@ -20,8 +23,18 @@ const Replies = ({ replies }) => {
             const timeB = getTimeFromString(B.createdAt);
             return timeB - timeA;
           })
-          .map((reply) => {
-            return <ReplyCard reply={reply} />;
+          .map((reply, index) => {
+            if (reply.user.username == userData.username)
+              return <MyReply key={index} reply={reply} />;
+            else
+              return (
+                <ReplyCard
+                  key={index}
+                  reply={reply}
+                  parentID={parentID}
+                  oldReplies={replies}
+                />
+              );
           })}
       </Box>
     </Box>

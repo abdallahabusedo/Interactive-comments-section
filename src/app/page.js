@@ -17,14 +17,15 @@ export default function Home() {
       })
       .then((res) => {
         setUserData(res.data);
+        localStorage.setItem("userData", JSON.stringify(res.data));
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, []);
   return !loading ? (
     <div className="flex flex-col justify-center items-center bg-lightGray">
-      <Comments userData={userData} />
-      <AddComment userData={userData} />
+      <Comments />
+      <AddComment />
     </div>
   ) : (
     <div className="flex flex-col justify-center items-center h-screen bg-lightGray">

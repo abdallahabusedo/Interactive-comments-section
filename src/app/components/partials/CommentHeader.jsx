@@ -6,7 +6,7 @@ import DeleteButton from "./DeleteButton";
 import EditButton from "./EditButton";
 import ReplayButton from "./ReplayButton";
 
-const MessageHeader = ({ user, createdAt, isOwner }) => {
+const MessageHeader = ({ user, createdAt, isOwner, setOpenReply }) => {
   return (
     <Box
       sx={{
@@ -40,7 +40,6 @@ const MessageHeader = ({ user, createdAt, isOwner }) => {
       </Box>
       {isOwner ? (
         <Box
-          fullWidth
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -51,7 +50,7 @@ const MessageHeader = ({ user, createdAt, isOwner }) => {
           <EditButton />
         </Box>
       ) : (
-        <ReplayButton />
+        <ReplayButton setOpenReply={setOpenReply} />
       )}
     </Box>
   );

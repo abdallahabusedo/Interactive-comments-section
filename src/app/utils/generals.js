@@ -1,6 +1,5 @@
 export function getTimeFromString(timeString) {
   const timeValue = parseInt(timeString);
-  console.log(timeValue);
   if (timeString.includes("year")) {
     return timeValue * 12; // Convert years to months
   } else if (timeString.includes("month")) {

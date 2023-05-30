@@ -11,8 +11,10 @@ import Image from "next/image";
 import React from "react";
 import { formatDateAgo } from "../utils/generals";
 
-const AddComment = ({ userData }) => {
+const AddComment = () => {
   const [newComment, setNewComment] = React.useState("");
+  let userData = JSON.parse(localStorage.getItem("userData"));
+
   const handleSend = () => {
     let dataToSend = {
       content: newComment,
@@ -47,7 +49,7 @@ const AddComment = ({ userData }) => {
     <Box sx={addCommentCard}>
       <Box sx={addCommentContainer}>
         <Image
-          src={"/images/avatars/image-ramsesmiron.webp"}
+          src={userData.image.png}
           width={40}
           height={40}
           alt="pic"

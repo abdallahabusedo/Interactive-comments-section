@@ -2,14 +2,14 @@ import { commentCard } from "@/styles/commentsStyle";
 import { Box } from "@mui/material";
 import React from "react";
 import Voting from "./Voting";
-import CommentHeader from "./CommentHeader";
 import CommentTypo from "./CommentTypo";
-import Replies from "./Replies";
-const MyComments = ({ comment }) => {
+import CommentHeader from "./CommentHeader";
+
+const MyReply = ({ reply }) => {
   return (
-    <Box>
-      <Box sx={commentCard}>
-        <Voting score={comment.score} />
+    <Box sx={{ display: "flex" }}>
+      <Box sx={{ ...commentCard, width: "760px" }}>
+        <Voting score={reply.score} />
         <Box
           sx={{
             display: "flex",
@@ -19,16 +19,15 @@ const MyComments = ({ comment }) => {
           }}
         >
           <CommentHeader
-            user={comment.user}
-            createdAt={comment.createdAt}
+            user={reply.user}
+            createdAt={reply.createdAt}
             isOwner={true}
           />
-          <CommentTypo content={comment.content} />
+          <CommentTypo content={reply.content} repliedTo={reply.replyingTo} />
         </Box>
       </Box>
-      <Replies replies={comment.replies} parentID={comment.id} />
     </Box>
   );
 };
 
-export default MyComments;
+export default MyReply;
