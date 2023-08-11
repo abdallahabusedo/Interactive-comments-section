@@ -10,7 +10,7 @@ import axios from "axios";
 import Image from "next/image";
 import React from "react";
 import { formatDateAgo } from "../utils/generals";
-
+import UploadPdfBtn from "./partials/UploadPdfBtn";
 const AddComment = () => {
   const [newComment, setNewComment] = React.useState("");
   let userData = JSON.parse(localStorage.getItem("userData"));
@@ -61,6 +61,7 @@ const AddComment = () => {
           placeholder="Add a comment"
           sx={{ flex: "1" }}
         />
+        <UploadPdfBtn />
         <Button onClick={handleSend} sx={sendButton}>
           SEND
         </Button>

@@ -5,7 +5,6 @@ import Image from "next/image";
 import React from "react";
 
 const DeleteButton = ({ parentId, replyId }) => {
-  console.log("deleteBt", parentId, replyId);
   const handleDelete = () => {
     axios
       .request({

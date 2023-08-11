@@ -25,7 +25,6 @@ const Replies = ({ replies, parentID }) => {
             return timeB - timeA;
           })
           .map((reply, index) => {
-            console.log("==>", parentID, reply.id);
             if (reply.user.username == userData.username)
               return <MyReply key={index} reply={reply} />;
             else

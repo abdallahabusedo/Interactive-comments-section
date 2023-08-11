@@ -4,9 +4,7 @@ import React from "react";
 import AddNestedReply from "./AddNestedReply";
 import CommentHeader from "./CommentHeader";
 import CommentTypo from "./CommentTypo";
-import Voting from "./Voting";
 const ReplyCard = ({ reply, parentID, oldReplies, replyId }) => {
-  console.log("----", parentID, replyId);
   const [openReply, setOpenReply] = React.useState(false);
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -16,7 +14,6 @@ const ReplyCard = ({ reply, parentID, oldReplies, replyId }) => {
           width: { lg: "760px", md: "760px", sm: "500px", xs: "300px" },
         }}
       >
-        <Voting score={reply.score} />
         <Box
           sx={{
             display: "flex",

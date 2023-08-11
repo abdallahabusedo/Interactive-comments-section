@@ -1,7 +1,6 @@
 import { commentCard } from "@/styles/commentsStyle";
 import { Box } from "@mui/material";
 import React from "react";
-import Voting from "./Voting";
 import CommentTypo from "./CommentTypo";
 import CommentHeader from "./CommentHeader";
 
@@ -14,7 +13,6 @@ const MyReply = ({ reply }) => {
           width: { lg: "760px", md: "760px", sm: "500px", xs: "300px" },
         }}
       >
-        <Voting score={reply.score} />
         <Box
           sx={{
             display: "flex",

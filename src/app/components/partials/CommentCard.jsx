@@ -6,13 +6,11 @@ import AddReply from "../AddReply";
 import CommentHeader from "./CommentHeader";
 import CommentTypo from "./CommentTypo";
 import Replies from "./Replies";
-import Voting from "./Voting";
 const CommentCard = ({ comment }) => {
   const [openReply, setOpenReply] = React.useState(false);
   return (
     <Box>
       <Box sx={commentCard}>
-        <Voting score={comment.score} />
         <Box
           sx={{
             display: "flex",

@@ -14,7 +14,6 @@ const MessageHeader = ({
   parentId,
   replyId,
 }) => {
-  console.log("header", parentId, replyId);
   return (
     <Box
       sx={{
